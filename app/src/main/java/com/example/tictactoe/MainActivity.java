@@ -2,6 +2,7 @@ package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import androidx.gridlayout.widget.GridLayout;
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
         //2. State of the game
 
+//           gameState[tag] = activePlayer;
+
+
 
        //3. Animate the movement of playerX
         //4. Player 0 vs Player 1
@@ -48,13 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 if(gameState[winningPos[0]]==0){
                     playerNo = 1;
                 }
-                //-----------------------end of GAME LOGIC-------------------------------------
+                //Make layout appear
 
-                //6. Once game is won, make the layout visible
-
-                //6.1. Set winning text
-
-                //6.2. Set layout to visible
 
 
             }else{
@@ -67,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 if(isOver){
                     TextView winningMessage = (TextView) findViewById(R.id.diplayWinningText);
                     winningMessage.setText("Draw!");
-
-                    //6.2. Set layout to visible
 
                     LinearLayout layout = (LinearLayout) findViewById(R.id.atWin);
                     layout.setVisibility(View.VISIBLE);
